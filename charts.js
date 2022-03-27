@@ -90,7 +90,10 @@ function buildCharts(sample) {
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found",
-      autosize: true
+      autosize: true,
+      font: {
+        family: 'Courier New'
+      }
     };
 
     // 10. Use Plotly to plot the data with the layout. 
@@ -127,7 +130,10 @@ function buildCharts(sample) {
         t: 40
       },
       hovermode: 'closest',
-      autosize: true
+      autosize: true,
+      font: {
+        family: 'Courier New'
+      }
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -172,7 +178,10 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-     autosize: true
+     autosize: true,
+     font: {
+      family: 'Courier New'
+    }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.

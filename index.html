@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bellybutton Biodiversity</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="static/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-
-<body>
-
-  <div class="container">
+  <body>
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
         <p>Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Test Subject ID</h3>
+            </div>
+            <div class="panel-body">
+              <h5>Select subject:</h5>
+              <select
+                id="selDataset"
+                onchange="optionChanged(this.value)"
+              ></select>
+            </div>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              Demographic Info
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="bar"></div>
+            </div> 
+            <div class="panel-footer">
+              Horizontal bar chart displaying the top 10 bacterial species.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="gauge"></div>
+            </div>
+            <div class="panel-footer">
+              Gauge chart displaying the weekly washing frequency.
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="bubble"></div>
+            </div>
+            <div class="panel-footer">
+              Bubble chart displaying OTU ids on x-axis and sample values on the y-axis. The sample values drive the marker size.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="charts.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="charts.js"></script>
+  </body>
 </html>

@@ -1,0 +1,12 @@
+.jumbotron {
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+  }
+
+  html {
+    font-family: 'Courier New'
+  }
+  
+  body {
+    font-family: 'Courier New'
+  }
